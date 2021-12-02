@@ -19,7 +19,6 @@ const FriendsContainer = () => {
   const classes = useStyles();
   const navigate = useNavigate();
   const { error, isLoading, response } = useFetch("/friends");
-
   const handleDetails = useCallback(() => {
     navigate("/friends/id");
   }, [navigate]);

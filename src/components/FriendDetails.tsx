@@ -7,11 +7,11 @@ import {
   Typography,
   CardContent,
   Avatar,
+  useTheme,
 } from "@material-ui/core";
 import Person from "../assets/person.jpg";
-import theme from "../style/theme";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   card: {
     minWidth: 445,
     [theme.breakpoints.down("xs")]: {
@@ -46,7 +46,7 @@ const useStyles = makeStyles({
     top: 10,
     right: 10,
   },
-});
+}));
 
 interface Props {
   friend: Definitions.FriendRequiredDetail;
@@ -54,6 +54,7 @@ interface Props {
 }
 
 const FriendDetails = ({ friend, handleClick }: Props) => {
+  const theme = useTheme();
   const classes = useStyles();
   return (
     <>

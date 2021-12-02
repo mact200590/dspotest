@@ -1,8 +1,13 @@
-import { Avatar, makeStyles, Button, useMediaQuery } from "@material-ui/core";
+import {
+  Avatar,
+  makeStyles,
+  Button,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
 import React, { useCallback } from "react";
-import theme from "../style/theme";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     flexDirection: "row",
@@ -48,7 +53,7 @@ const useStyles = makeStyles({
       display: "none",
     },
   },
-});
+}));
 
 interface Props {
   friend: Definitions.Friend;
@@ -57,6 +62,7 @@ interface Props {
 
 const FriendItem = ({ friend, handleDetails }: Props) => {
   const classes = useStyles();
+  const theme = useTheme();
   const handleOnclick = useCallback(() => {
     handleDetails();
   }, [handleDetails]);

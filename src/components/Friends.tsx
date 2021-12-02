@@ -1,9 +1,8 @@
 import React from "react";
 import { makeStyles, Theme, Typography } from "@material-ui/core";
 import FriendItem from "./FriendItem";
-import theme from "../style/theme";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=>({
   container: {
     display: "flex",
     flexDirection: "column",
@@ -41,7 +40,7 @@ const useStyles = makeStyles({
     marginBottom: 8,
     marginTop: 8,
   },
-});
+}));
 
 interface Props {
   friends: Definitions.Friend[];

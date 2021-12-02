@@ -7,7 +7,8 @@ describe('This is to api return the data', () => {
       (response) => {
         expect(response.status).to.eq(200);
         expect(response.body.length).to.eq(6)
-        expect(response.body[0].first_name).to.eq('Jeremy');
+        expect(response.body[0].first_name).to.eq('Jeremy');  
+        expect(response.body[1]).to.have.property('last_name',"Baratovich");        
       }
     );
   });
