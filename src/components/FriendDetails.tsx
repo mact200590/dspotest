@@ -67,7 +67,7 @@ const FriendDetails = ({ friend, handleClick }: Props) => {
         <CardContent>
           <div className={classes.avatar}>
             <Avatar
-              data-cy="avatar-element"
+              data-cy="avatar"
               alt="Avatar"
               src={friend.img}
               children={friend.first_name.charAt(0)}
