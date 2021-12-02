@@ -8,7 +8,7 @@ import {
   CardContent,
   Avatar,
 } from "@material-ui/core";
-import Front from "../assets/cardImage.webp";
+import Person from "../assets/person.jpg";
 import theme from "../style/theme";
 
 const useStyles = makeStyles({
@@ -62,7 +62,7 @@ const FriendDetails = ({ friend, handleClick }: Props) => {
           style={{ height: "140px" }}
           component="img"
           alt="img"
-          image={Front}
+          src={Person}
         />
         <CardContent>
           <div className={classes.avatar}>
