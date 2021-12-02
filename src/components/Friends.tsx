@@ -45,7 +45,7 @@ const useStyles = makeStyles({
 
 interface Props {
   friends: Definitions.Friend[];
-  handleDetails: (id: number) => void;
+  handleDetails: () => void;
 }
 
 const Friends = ({ friends, handleDetails }: Props) => {

@@ -52,14 +52,14 @@ const useStyles = makeStyles({
 
 interface Props {
   friend: Definitions.Friend;
-  handleDetails: (id: number) => void;
+  handleDetails: () => void;
 }
 
 const FriendItem = ({ friend, handleDetails }: Props) => {
   const classes = useStyles();
   const handleOnclick = useCallback(() => {
-    handleDetails(friend.id);
-  }, [friend.id, handleDetails]);
+    handleDetails();
+  }, [handleDetails]);
 
   const matches = useMediaQuery(theme.breakpoints.down("xs"));
   return (

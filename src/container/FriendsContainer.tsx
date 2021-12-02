@@ -20,12 +20,9 @@ const FriendsContainer = () => {
   const navigate = useNavigate();
   const { error, isLoading, response } = useFetch("/friends");
 
-  const handleDetails = useCallback(
-    (id: number) => {
-      navigate("/friends/id");
-    },
-    [navigate]
-  );
+  const handleDetails = useCallback(() => {
+    navigate("/friends/id");
+  }, [navigate]);
 
   if (error) {
     return <div className={classes.center}>{`Message ${error.message}`}</div>;
